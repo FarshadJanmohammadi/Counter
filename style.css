@@ -61,6 +61,7 @@ body {
 .container-button {
   display: grid;
   grid-template-areas: "btn1 btn2 btn3";
+  justify-items: stretch;
   column-gap: 20px;
   row-gap: 20px;
   /* grid-column-gap: 10px; */
@@ -148,7 +149,7 @@ footer a i {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (min-width: 401px) {
   .container-button {
     grid-template-areas:
       "btn1 . btn3"
@@ -158,8 +159,8 @@ footer a i {
 @media screen and (max-width: 400px) {
   .container-button {
     grid-template-areas:
-      "btn1 . ."
-      "btn3 . ."
-      "btn2 . .";
+      "btn3"
+      "btn2"
+      "btn1";
   }
 }
