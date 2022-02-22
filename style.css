@@ -59,8 +59,11 @@ body {
 }
 
 .container-button {
-  display: flex;
-  column-gap: 10px;
+  display: grid;
+  grid-template-areas: "btn1 btn2 btn3";
+  column-gap: 20px;
+  row-gap: 20px;
+  /* grid-column-gap: 10px; */
 }
 
 .container-button button {
@@ -80,6 +83,7 @@ body {
 }
 
 .container-button #btn1 {
+  grid-area: btn1;
   border: 2px solid var(--clr-primary-4);
   color: var(--clr-primary-4);
 }
@@ -89,6 +93,7 @@ body {
 }
 
 .container-button #btn2 {
+  grid-area: btn2;
   border: 2px solid var(--clr-primary-7);
   color: var(--clr-primary-7);
 }
@@ -98,6 +103,7 @@ body {
 }
 
 .container-button #btn3 {
+  grid-area: btn3;
   border: 2px solid var(--clr-primary-6);
   color: var(--clr-primary-6);
 }
@@ -139,5 +145,21 @@ footer a i {
   100% {
     transform: scale(1.4);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-button {
+    grid-template-areas:
+      "btn1 . btn3"
+      "btn2 btn2 btn2";
+  }
+}
+@media screen and (max-width: 400px) {
+  .container-button {
+    grid-template-areas:
+      "btn1 . ."
+      "btn3 . ."
+      "btn2 . .";
   }
 }
