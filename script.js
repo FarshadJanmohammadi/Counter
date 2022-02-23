@@ -52,18 +52,26 @@ sectionFooter.appendChild(aFooter);
 const buttonThreeHandler = () => {
   const count = h1_container.innerText;
   h1_container.innerText = Number(count) + 1;
-  h1_container.style.color = "#27ae60";
+  h1_container.innerText > "0"
+    ? (h1_container.style.color = "#27ae60")
+    : h1_container.innerText == "0"
+    ? (h1_container.style.color = "#2980b9")
+    : null;
 };
 
 const buttonTwoHandler = () => {
   h1_container.innerText = "0";
-  h1_container.style.color = "#2980b9";
+  h1_container.innerText == "0" ? (h1_container.style.color = "#2980b9") : null;
 };
 
 const buttonOneHandler = () => {
   const count = h1_container.innerText;
   h1_container.innerText = Number(count) - 1;
-  h1_container.style.color = "#ed4c67";
+  h1_container.innerText < "0"
+    ? (h1_container.style.color = "#ed4c67")
+    : h1_container.innerText == "0"
+    ? (h1_container.style.color = "#2980b9")
+    : null;
 };
 
 //End of function Handler
