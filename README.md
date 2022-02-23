@@ -1,5 +1,5 @@
 
-# Countre
+# Counter
 
 Made a Counter using Vinilla JavaScript
 
